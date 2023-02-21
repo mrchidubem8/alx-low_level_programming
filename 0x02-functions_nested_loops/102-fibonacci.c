@@ -1,4 +1,3 @@
-lines (25 sloc)  324 Bytes
 #include <stdio.h>
 
 /**
@@ -25,5 +24,6 @@ int main(void)
 		i++;
 	}
 	putchar('\n');
+
 	return (0);
-}
+}}
