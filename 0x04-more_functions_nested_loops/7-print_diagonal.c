@@ -1,32 +1,26 @@
 #include "main.h"
 
 /**
- * print_diagonal - draw a diagonal line
- * @n: number of times the '\' char is printed
- * Description: Can only use _putchar to print
+ * print_diagonal - checks for digit
+ * @n: number of \\ to be printed
+ * Return: void
  */
-
 void print_diagonal(int n)
 {
-	int i;
-	int count;
+	int i = 0, ii;
 
-	if (n <= 0)
+	while (i < n && n > 0)
 	{
-		_putchar('\n');
-	}
-	else
-	{
-		while (i <= n)
+		ii = 0;
+		while (ii < i)
 		{
-			for (count = 0; count < i; count++)
-			{
-				_putchar(' ');
-			}
-			_putchar('\\');
-			_putchar('\n');
-			i++;
+			_putchar(' ');
+			ii++;
 		}
+		_putchar('\\');
 		_putchar('\n');
+		i++;
 	}
+	if (i == 0)
+		_putchar('\n');
 }
