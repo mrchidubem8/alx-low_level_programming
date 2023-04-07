@@ -1,23 +1,15 @@
-#include <stdio.h>
 #include "main.h"
-
+#include <stdlib.h>
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * clear_bit - sets the value of a bit to 0 at a given index
+ * @n: parameter
+ * @index: index
+ * Return: 1 if works, -1 if error
  */
-int main(void)
+int clear_bit(unsigned long int *n, unsigned int index)
 {
-    unsigned long int n;
-
-    n = 1024;
-    clear_bit(&n, 10);
-    printf("%lu\n", n);
-    n = 0;
-    clear_bit(&n, 10);
-    printf("%lu\n", n);
-    n = 98;
-    clear_bit(&n, 1);
-    printf("%lu\n", n);
-    return (0);
+	if (index > sizeof(n) * 8)
+		return (-1);
+	*n &= ~(1 << index);
+	return (1);
 }
